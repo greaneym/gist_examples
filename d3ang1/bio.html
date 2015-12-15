@@ -1,0 +1,35 @@
+<!doctype html>
+  <head>
+    <meta charset="utf-8">
+    <title>d3 and Angular</title>
+    <meta name="Angular and Biovisualize's cellular automata " content="d3 and Angular">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="bioapp.js"></script>
+    <script src="d3service.js"></script>
+    <script src="bioctrl.js"></script>
+    <script src="biodirective.js"> </script>
+  </head>
+  <body ng-app="bcaApp">
+  <div ng-controller="bcaCtrl">
+   <div id="grid">
+        <bca-test 
+        input2="{{inputs.rString}} " 
+        </bca-test>
+    </div>
+<div class="slider slider-horizontal" style="width: 300px;">
+
+           Neighbors Rule:<input type="range" ng-model="inputs.rString" ng-change="calcStyle(inputs)" min="1" max="100" /><br> 
+
+<br>
+     Neighbor Rule: {{inputs.rString}} 
+    </div>
+    </div>
+
+  </body>
+<div>
+<h4>
+AngularJS example using modification of Biovisualize’s block #5496517 May 1, 2013
+</h4>
+</div>
+</html>
